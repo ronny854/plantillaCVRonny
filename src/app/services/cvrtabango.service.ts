@@ -10,6 +10,7 @@ export class CvrtabangoService {
   servicios: any[]=[];
   contacto: any[]=[];
   portafolio: any[]=[];
+  experiencia: any[]=[];
 
   constructor(private http: HttpClient) {
     this.CargarProfesional();
@@ -17,6 +18,7 @@ export class CvrtabangoService {
     this.CargarServicios();
     this.CargarContacto();
     this.CargarPortafolio();
+    this.CargarExperiencia();
   }
 
   private CargarProfesional() {
@@ -61,6 +63,14 @@ export class CvrtabangoService {
       .subscribe((resp: any) => {
         this.portafolio = resp;
         console.log(this.portafolio);
+      });
+  }
+  private CargarExperiencia() {
+    this.http
+      .get('https://cv-ronny-default-rtdb.firebaseio.com/Experiencia.json')
+      .subscribe((resp: any) => {
+        this.experiencia = resp;
+        console.log(this.experiencia);
       });
   }
 }

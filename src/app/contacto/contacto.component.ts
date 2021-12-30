@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CvrtabangoService } from '../services/cvrtabango.service';
 
 @Component({
   selector: 'app-contacto',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public cv: CvrtabangoService) { }
 
   ngOnInit(): void {
   }
