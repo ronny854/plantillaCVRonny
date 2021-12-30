@@ -1,0 +1,65 @@
+<div class="content-blocks portfolio">
+  <section class="content">
+    <div class="block-content">
+      <h3 class="block-title">Portafolio</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="filters">
+            <span>Filters :</span>
+            <ul id="filters">
+              <li class="active" data-filter="*">Todo</li>
+              <li data-filter=".web">Desarrollo Web</li>
+              <li data-filter=".movil">Desarrollo móvil</li>
+            </ul>
+          </div>
+          <div class="portfolio-container row isotope" id="portfolio-container">
+            <!-- WORK 1 START -->
+            <div *ngFor="let portafoliox of cv.portafolio">
+            <div class="col-md-5 col-sm-6 col-xs-12 portfolio-item {{portafoliox.tipo}}">
+              <div class="portfolio-column">
+                  <img
+                    src={{portafoliox.imagen}}
+                    alt=""
+                  />
+                  <div class="contenidoC">
+                  <h2>{{portafoliox.nombre}}</h2>
+                  <p>{{portafoliox.descripcion}}</p>
+                  <a class="btn btn-git" href={{portafoliox.link}} target="_blank">Ver en GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- WORK 1 END -->
+            <!-- WORK 2 START -->
+            <!--  <div
+                class="col-md-4 col-sm-6 col-xs-12 portfolio-item movil"
+              >
+                <a class="open-project" href="project-2.html">
+                  <div class="portfolio-column">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-content">
+                        <h2>NOTES</h2>
+                        <hr />
+                        <p>View details.</p>
+                      </div>
+                      <div class="portfolio-overlay"></div>
+                    </div>
+                    <img
+                      src="assets\images\portfolio\masonry\002.jpeg"
+                      alt=""
+                    />
+                  </div>
+                </a>
+              </div> -->
+            <!-- WORK 2 END -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--       <div class="row text-center">
+        <div class="col-md-12 btn-email">
+          <a class="btn lowercase">shout@james.com</a>
+        </div>
+      </div> -->
+  </section>
+</div>

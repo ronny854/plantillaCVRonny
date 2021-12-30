@@ -1,0 +1,258 @@
+<div class="content-blocks about">
+  <section class="content" id="about">
+    <div class="block-content">
+      <h3 class="block-title">Perfil</h3>
+      <h3 class="subheading">
+        ¡Hola! soy Ronny Tabango
+        <strong>Desarrollador Full Stack Junior</strong>
+      </h3>
+      <p>
+        Desarrollador full stack Junior. especializado en desarrollo web y
+        móvil. Experimentado con todas las etapas de la ciclo de desarrollo para
+        proyectos web dinámicos. Soy una persona con ganas de aprender, además,
+        soy muy creativo, me adapto de manera rápida a cualquier tecnología , me
+        gusta mucho los desafíos y dar solución a los problemas de la manera mas
+        eficiente y trabajo muy bien en equipo.Tengo conocimiento en las
+        siguientes tecnologías: HTML5, CSS, PHP, JSON, Java, JavaScript, JQuery,
+        Angular JS, CodeIgniter, C#, Flutter, SQL, Firebase, GIT, consumo de API
+        Rest, despliegue de aplicaciones Android, nivel de inglés
+        intermedio - B1.
+      </p>
+      <div *ngFor="let contactox of cv.contacto">
+        <div class="info-list row">
+          <div class="col-sm-6">
+            <span>Nombre : </span> {{ contactox.nombre }}
+          </div>
+          <div class="col-sm-6">
+            <span>Fecha de Nacimiento : </span> {{ contactox.fechaN }}
+          </div>
+          <div class="col-sm-6">
+            <span>Dirección : </span> {{ contactox.direccion }}
+          </div>
+          <div class="col-sm-6">
+            <span>Email : </span> {{ contactox.correo }}
+          </div>
+          <div class="col-sm-6">
+            <span>Telefono : </span> {{ contactox.telefono }}
+          </div>
+          <div class="col-sm-6">
+            <span>Interes : </span> Desarrollador Web, Desarrollador Móvil
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-content">
+      <h3 class="block-title">Profesional</h3>
+
+      <div *ngFor="let profex of cv.profesional">
+        <label class="progress-bar-label">{{ profex.nombre }}</label>
+        <div class="progress">
+          <div
+            [style.width.%]="profex.valor"
+            class="progress-bar"
+            role="progressbar"
+            attr.aria-valuenow="{{ profex.valor }}"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span>{{ profex.valor }}%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--     <div class="block-content">
+      <h3 class="block-title">Experiencia</h3>
+      <div class="timeline experience">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="exp-holder">
+              <div class="exp">
+                <div class="hgroup">
+                  <h4><span>UX Designer</span> @ Apple Inc</h4>
+                  <h5>Feb 2017 - <span class="current">Present</span></h5>
+                </div>
+                <p>
+                  Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in
+                  reprehend incididunt labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+              <div class="exp">
+                <div class="hgroup">
+                  <h4><span>Research Assistant</span> @ Facebook</h4>
+                  <h5>Sept 2017 - Nov 2017</h5>
+                </div>
+                <p>
+                  Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in
+                  reprehend incididunt labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+              <div class="exp">
+                <div class="hgroup">
+                  <h4><span>Intern</span> @ Google</h4>
+                  <h5>May 2017 - Sept 2017</h5>
+                </div>
+                <p>
+                  Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in
+                  reprehend incididunt labore et dolore magna aliqua. Ut enim ad
+                  minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat inventore veritatis et
+                  quasi architecto beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="block-content">
+      <h3 class="block-title">Educación</h3>
+      <div class="timeline education">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="exp-holder">
+              <div *ngFor="let educax of cv.educacion">
+                <div class="exp">
+                  <div class="hgroup">
+                    <h4>
+                      {{ educax.nombre }}
+                    </h4>
+                    <h5>{{ educax.fecha }}</h5>
+                  </div>
+<!--                   <p>
+                    Ut enim ad minim veniam, quis nostrud exerc. Irure dolor in
+                    reprehend incididunt labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat inventore veritatis
+                    et quasi architecto beatae vitae dicta sunt explicabo.
+                  </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--    <div class="block-content">
+      <h3 class="block-title">Servicios</h3>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 service">
+          <div class="service-icon">
+            <i class="ion-laptop"></i>
+          </div>
+          <h4>Diseño Web</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet.
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-6 service">
+          <div class="service-icon">
+            <i class="ion-pie-graph"></i>
+          </div>
+          <h4>Desarrollo de Aplicaciones</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet.
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-6 service">
+          <div class="service-icon">
+            <i class="ion-paintbucket"></i>
+          </div>
+          <h4>Diseño Grafico</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet.
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-6 service">
+          <div class="service-icon">
+            <i class="ion-printer"></i>
+          </div>
+          <h4>Print Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet.
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-6 service">
+          <div class="service-icon">
+            <i class="ion-qr-scanner"></i>
+          </div>
+          <h4>Graphic Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet.
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-6 service">
+          <div class="service-icon">
+            <i class="ion-social-buffer"></i>
+          </div>
+          <h4>Print Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--     <div class="block-content">
+      <h3 class="block-title">Awards</h3>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 awards">
+          <img src="assets\images\awards\1.jpeg" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-6 awards">
+          <img src="assets\images\awards\2.jpeg" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-6 awards">
+          <img src="assets\images\awards\3.jpeg" alt="" />
+        </div>
+        <div class="col-md-3 col-sm-6 awards">
+          <img src="assets\images\awards\4.jpeg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="block-content">
+      <h3 class="block-title">Testimonios</h3>
+      <div class="row">
+        <div id="liontestimonial" class="owl-carousel owl-theme">
+          <div class="item testimonials">
+            <img src="assets\images\testimonials\1.jpeg" alt="" />
+            <blockquote>
+              Trabajo con Anderson en varios proyectos de desarrollo web y creo
+              que es extremadamente desarrollador FrontEnd creativo y técnico.
+              La experiencia de Anderson implica la construcción compleja de
+              diseño receptivo con HTML 5, CSS3 y JavaScript.
+              <p class="quote">
+                <span>Jose Bonifacio</span> - Analista Desarrollador TI
+              </p>
+            </blockquote>
+          </div>
+          <div class="item testimonials">
+            <img src="assets\images\testimonials\2.jpeg" alt="" />
+            <blockquote>
+              Trabajo con Anderson en varios proyectos de desarrollo web y creo
+              que es un desarrolador FrontEnd y BackEnd extremadamente creativo.
+              <p class="quote">
+                <span>Cristian López</span> - Infraestructura de TI
+              </p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!--     <div class="row text-center">
+      <div class="col-md-12 btn-email">
+        <a class="btn lowercase">davisanderson87@gmail.com</a>
+      </div>
+    </div> -->
+  </section>
+</div>
